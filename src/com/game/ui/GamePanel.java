@@ -2,9 +2,8 @@ package com.game.ui;
 
 import javax.swing.JPanel;
 
-import com.game.effect.Animation;
-import com.game.effect.CacheDataLoader;
-import com.game.effect.FrameImage;
+import com.game.game_object.Megaman;
+import com.game.game_object.PhysicalMap;
 
 import java.awt.Color;
 import java.awt.Graphics;
@@ -23,13 +22,16 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
   private BufferedImage bufImage;
   private Graphics2D buf2D;
 
+  Megaman megaman = new Megaman(300, 300, 100, 100, 0.1f);
+  PhysicalMap physicalMap = new PhysicalMap(0, 0);
+
   // FrameImage frame1, frame2, frame3, frame4, frame5, frame6, frame7;
 
   BufferedImage image;
   BufferedImage subImage;
 
   public GamePanel() {
-    inputManager = new InputManager();
+    inputManager = new InputManager(this);
     this.bufImage = new BufferedImage(GameFrame.SCREEN_WIDTH, GameFrame.SCREEN_HEIGHT, BufferedImage.TYPE_INT_ARGB);
 
     // test cache dataloader animation
@@ -90,8 +92,9 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
     if (this.buf2D != null) {
       this.buf2D.setColor(Color.WHITE);
       this.buf2D.fillRect(0, 0, GameFrame.SCREEN_WIDTH, GameFrame.SCREEN_HEIGHT);
-      this.buf2D.setColor(Color.red);
-      this.buf2D.fillRect(40, 50, 100, 100);
+      // draw object game
+      // megaman.draw(buf2D);
+      physicalMap.draw(buf2D);
     }
   }
 
@@ -101,6 +104,10 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
       thread = new Thread(this);
       thread.start();
     }
+  }
+
+  public void update() {
+    this.megaman.update();
   }
 
   @Override
@@ -117,6 +124,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
     while (isRunning) {
       // System.out.println("a = " + a++);
       // update game
+      this.update();
       // render game
       this.renderGame();
       this.repaint();

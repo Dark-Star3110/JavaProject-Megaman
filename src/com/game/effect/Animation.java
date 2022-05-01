@@ -160,6 +160,8 @@ public class Animation {
     if (this.beginTime == 0)
       this.beginTime = currentTime;
     else {
+      // goi ham update lien tuc trong vong while o gamePanel (tra ve void => ko
+      // update frame) cho den khi khoang time lon hon time bi delay
       if (currentTime - this.beginTime > this.delayFrames.get(this.currentFrame)) {
         this.nextFrame();
         this.beginTime = currentTime;

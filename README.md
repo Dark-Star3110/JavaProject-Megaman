@@ -1,20 +1,21 @@
 # Megaman Java
 
-## Getting Started
+## Cấu trúc thư mục
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Workspace chứa hai thư mục theo mặc định, trong đó :
 
-## Folder Structure
+-   `src`: thư mục chứa mã nguồn
+-   `lib`: thư mục chứa các dependencies
 
-The workspace contains two folders by default, where:
+Trong khi đó, các tệp đầu ra đã biên dịch sẽ được tạo trong thư mục `bin` theo mặc định.
 
--   `src`: the folder to maintain sources
--   `lib`: the folder to maintain dependencies
+> Nếu bạn muốn tùy chỉnh cấu trúc thư mục, hãy mở `.vscode/settings.json` và cập nhật các cài đặt liên quan ở đó. (đối với visual studio code 🙂)
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## Quản lý các phụ thuộc
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+Chế độ xem `JAVA PROJECTS` cho phép bạn quản lý các phần phụ thuộc của mình. Thông tin chi tiết có thể được tìm thấy [tại đây](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
 
-## Dependency Management
+## Chi tiết về project
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+-   Project là bài tập lớn thực hành ngôn ngữ hướng đối tượng 🙂
+-   Project clone & update lại game Megaman huyền thoại bằng ngôn ngữ Java 😵‍💫

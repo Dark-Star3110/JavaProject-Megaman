@@ -116,12 +116,18 @@ public class Animation {
 
   // ============ xu ly loric
 
-  public boolean getIsIgnoreFrame(int index) {
-    return this.ignoreFrames.get(index);
+  public boolean isIgnoreFrame(int id) {
+    return ignoreFrames.get(id);
   }
 
-  public boolean unIgnoreFrame(int index) {
-    return this.ignoreFrames.set(index, false);
+  public void setIgnoreFrame(int id) {
+    if (id >= 0 && id < ignoreFrames.size())
+      ignoreFrames.set(id, true);
+  }
+
+  public void unIgnoreFrame(int id) {
+    if (id >= 0 && id < ignoreFrames.size())
+      ignoreFrames.set(id, false);
   }
 
   public void reset() {

@@ -22,6 +22,7 @@ public class InputManager {
       case KeyEvent.VK_DOWN:
         // System.out.println("down");
         // this.gameWorld.physicalMap.y += 3;
+        this.gameWorld.megaman.dick();
         break;
       case KeyEvent.VK_LEFT:
         // System.out.println("left");
@@ -36,6 +37,29 @@ public class InputManager {
         // this.gameWorld.physicalMap.x += 3;
         break;
       case KeyEvent.VK_ENTER:
+        if (this.gameWorld.state == GameWorld.INIT_GAME) {
+          if (this.gameWorld.previousState == GameWorld.GAMEPLAY) {
+            this.gameWorld.switchState(GameWorld.GAMEPLAY);
+          } else {
+            this.gameWorld.switchState(GameWorld.TUTORIAL);
+          }
+          this.gameWorld.bgMusic.loop();
+          this.gameWorld.bgMusic.play();
+        }
+        if (this.gameWorld.state == GameWorld.TUTORIAL && this.gameWorld.storyTutorial >= 1) {
+          if (this.gameWorld.storyTutorial <= 3) {
+            this.gameWorld.storyTutorial++;
+            this.gameWorld.currentSize = 1;
+            this.gameWorld.textTutorial = this.gameWorld.texts1[this.gameWorld.storyTutorial - 1];
+          } else {
+            this.gameWorld.switchState(GameWorld.GAMEPLAY);
+          }
+
+          // for meeting boss tutorial
+          if (this.gameWorld.tutorialState == GameWorld.MEETFINALBOSS) {
+            this.gameWorld.switchState(GameWorld.GAMEPLAY);
+          }
+        }
         break;
       case KeyEvent.VK_SPACE:
         this.gameWorld.megaman.jump();
@@ -66,6 +90,12 @@ public class InputManager {
         }
         break;
       case KeyEvent.VK_ENTER:
+        // if(this.gameWorld.state == GameWorld.GAMEOVER || this.gameWorld.state ==
+        // GameWorld.GAMEWIN) {
+        // gamePanel.setState(new MenuState(gamePanel));
+        // } else if(this.gameWorld.state == PAUSEGAME) {
+        // this.gameWorld.state = this.gameWorld.getLastState();
+        // }
         break;
       case KeyEvent.VK_SPACE:
         // this.gameWorld.megaman.setSpeedY(0);

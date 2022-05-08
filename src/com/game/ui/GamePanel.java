@@ -6,9 +6,7 @@ import com.game.game_object.GameWorld;
 
 // import java.awt.Color;
 import java.awt.Graphics;
-import java.awt.Graphics2D;
 import java.awt.event.KeyEvent;
-import java.awt.image.BufferedImage;
 import java.awt.event.KeyListener;
 
 public class GamePanel extends JPanel implements Runnable, KeyListener {
@@ -17,9 +15,6 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
   private boolean isRunning;
 
   private InputManager inputManager;
-
-  private BufferedImage bufImage;
-  private Graphics2D buf2D;
 
   private GameWorld gameWorld;
 
@@ -31,7 +26,6 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
   public GamePanel() {
     this.gameWorld = new GameWorld();
     inputManager = new InputManager(this.gameWorld);
-    this.bufImage = new BufferedImage(GameFrame.SCREEN_WIDTH, GameFrame.SCREEN_HEIGHT, BufferedImage.TYPE_INT_ARGB);
 
     // test cache dataloader animation
     // frame1 = CacheDataLoader.getInstance().getFrameImage("run1");
@@ -63,7 +57,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
   @Override
   public void paint(Graphics g) {
 
-    g.drawImage(bufImage, 0, 0, this);
+    g.drawImage(this.gameWorld.getBufferedImage(), 0, 0, this);
     // Graphics2D g2 = (Graphics2D) g;
     // frame1.draw(g2, 30, 30);
     // anm1.draw(300, 300, g2);
@@ -82,19 +76,20 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
   }
 
   public void renderGame() {
-    if (this.bufImage == null) {
-      this.bufImage = new BufferedImage(GameFrame.SCREEN_WIDTH, GameFrame.SCREEN_HEIGHT, BufferedImage.TYPE_INT_ARGB);
-    }
-    if (this.bufImage != null) {
-      this.buf2D = (Graphics2D) this.bufImage.getGraphics();
-    }
-    if (this.buf2D != null) {
-      // this.buf2D.setColor(Color.WHITE);
-      // this.buf2D.fillRect(0, 0, GameFrame.SCREEN_WIDTH, GameFrame.SCREEN_HEIGHT);
-      // draw object game
-      // megaman.draw(buf2D);
-      this.gameWorld.render(buf2D);
-    }
+    // if (this.bufImage == null) {
+    // this.bufImage = new BufferedImage(GameFrame.SCREEN_WIDTH,
+    // GameFrame.SCREEN_HEIGHT, BufferedImage.TYPE_INT_ARGB);
+    // }
+    // if (this.bufImage != null) {
+    // this.buf2D = (Graphics2D) this.bufImage.getGraphics();
+    // }
+    // if (this.buf2D != null) {
+    // this.buf2D.setColor(Color.WHITE);
+    // this.buf2D.fillRect(0, 0, GameFrame.SCREEN_WIDTH, GameFrame.SCREEN_HEIGHT);
+    // draw object game
+    // megaman.draw(buf2D);
+    // }
+    this.gameWorld.render();
   }
 
   public void startGame() {

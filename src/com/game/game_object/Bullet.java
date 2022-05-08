@@ -20,7 +20,7 @@ public abstract class Bullet extends ParticularObject {
     if (object != null && object.getState() == ALIVE) {
       setBlood(0);
       object.beHurt(getDamage());
-      System.out.println("Bullet set behurt for megaman");
+      System.out.println("Bullet set behurt for enemy");
     }
   }
 

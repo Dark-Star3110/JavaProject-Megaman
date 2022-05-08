@@ -1,7 +1,6 @@
 package com.game.game_object;
 
 import java.applet.AudioClip;
-import java.awt.Color;
 import java.awt.Rectangle;
 
 import com.game.effect.Animation;

@@ -30,8 +30,8 @@ public class Megaman extends Human {
   public Megaman(float x, float y, GameWorld gameWorld) {
     super(x, y, 70, 90, 0.1f, 100, gameWorld);
 
-    // shooting1 = CacheDataLoader.getInstance().getSound("bluefireshooting");
-    // hurtingSound = CacheDataLoader.getInstance().getSound("megamanhurt");
+    shooting1 = CacheDataLoader.getInstance().getSound("bluefireshooting");
+    hurtingSound = CacheDataLoader.getInstance().getSound("megamanhurt");
 
     setTeamType(LEAGUE_TEAM);
 
@@ -333,7 +333,7 @@ public class Megaman extends Human {
   public void attack() {
     if (!isShooting && !getIsDicking()) { // khác đang bắn or đang ngồi
 
-      // shooting1.play();
+      shooting1.play();
 
       Bullet bullet = new BlueBullet(getPosX(), getPosY(), getGameWorld());
       if (getDirection() == LEFT_DIR) {
@@ -370,6 +370,6 @@ public class Megaman extends Human {
   @Override
   public void hurtingCallback() {
     System.out.println("Call back hurting");
-    // hurtingSound.play();
+    hurtingSound.play();
   }
 }

@@ -4,7 +4,7 @@ import javax.swing.JPanel;
 
 import com.game.game_object.GameWorld;
 
-import java.awt.Color;
+// import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.event.KeyEvent;
@@ -89,8 +89,8 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
       this.buf2D = (Graphics2D) this.bufImage.getGraphics();
     }
     if (this.buf2D != null) {
-      this.buf2D.setColor(Color.WHITE);
-      this.buf2D.fillRect(0, 0, GameFrame.SCREEN_WIDTH, GameFrame.SCREEN_HEIGHT);
+      // this.buf2D.setColor(Color.WHITE);
+      // this.buf2D.fillRect(0, 0, GameFrame.SCREEN_WIDTH, GameFrame.SCREEN_HEIGHT);
       // draw object game
       // megaman.draw(buf2D);
       this.gameWorld.render(buf2D);

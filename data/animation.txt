@@ -23,7 +23,7 @@ flyingupshoot1 70000000 flyingupshoot2 70000000 flyingupshoot3 70000000 flyingup
 landing
 landing1 50000000 landing2 50000000 landing2 50000000
 
-bluefire
+bluebullet
 bullet1_1 30000000 bullet1_2 30000000 bullet1_3 30000000 bullet1_4 30000000 bullet1_5 30000000 bullet1_6 30000000 bullet1_7 30000000 bullet1_8 30000000
 
 redeyebullet
@@ -58,7 +58,7 @@ dangerousgirl
 dangerousgirl1 70000000 dangerousgirl2 70000000 dangerousgirl3 70000000 dangerousgirl4 70000000 dangerousgirl5 70000000 dangerousgirl6 70000000 dangerousgirl7 70000000 dangerousgirl8 70000000
 
 robotR
-robotR1 70000000 robotR2 70000000 robotR3 70000000 robotR2 70000000 
+robotR1 70000000 robotR2 70000000 robotR3 70000000 robotR2 70000000
 
 robotRbullet
 bullet5_1 70000000 bullet5_2 70000000 bullet5_3 70000000
@@ -79,4 +79,4 @@ boss_shooting
 boss_shooting1 500000000 boss_shooting2 500000000
 
 boss_slide
-boss_slide1 500000000 boss_slide2 500000000 boss_slide3 500000000 boss_slide4 500000000 
+boss_slide1 500000000 boss_slide2 500000000 boss_slide3 500000000 boss_slide4 500000000

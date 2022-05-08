@@ -41,6 +41,7 @@ public class InputManager {
         this.gameWorld.megaman.jump();
         break;
       case KeyEvent.VK_A:
+        this.gameWorld.megaman.attack();
         break;
     }
   }
@@ -52,12 +53,17 @@ public class InputManager {
         break;
       case KeyEvent.VK_DOWN:
         // System.out.println("down");
+        this.gameWorld.megaman.standUp();
         break;
       case KeyEvent.VK_LEFT:
-        this.gameWorld.megaman.setSpeedX(0);
+        if (this.gameWorld.megaman.getSpeedX() < 0) {
+          this.gameWorld.megaman.stopRun();
+        }
         break;
       case KeyEvent.VK_RIGHT:
-        this.gameWorld.megaman.setSpeedX(0);
+        if (this.gameWorld.megaman.getSpeedX() > 0) {
+          this.gameWorld.megaman.stopRun();
+        }
         break;
       case KeyEvent.VK_ENTER:
         break;

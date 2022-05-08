@@ -146,16 +146,15 @@ public abstract class ParticularObject extends GameObject {
 
   public abstract void attack();
 
-  // public boolean isObjectOutOfCameraView(){
-  // if(getPosX() - getGameWorld().camera.getPosX() >
-  // getGameWorld().camera.getWidthView() ||
-  // getPosX() - getGameWorld().camera.getPosX() < -50
-  // ||getPosY() - getGameWorld().camera.getPosY() >
-  // getGameWorld().camera.getHeightView()
-  // ||getPosY() - getGameWorld().camera.getPosY() < -50)
-  // return true;
-  // else return false;
-  // }
+  public boolean isObjectOutOfCameraView() {
+    if (this.getPosX() - this.getGameWorld().camera.getPosX() > this.getGameWorld().camera.getWidthView() ||
+        this.getPosX() - this.getGameWorld().camera.getPosX() < -50
+        || this.getPosY() - this.getGameWorld().camera.getPosY() > this.getGameWorld().camera.getHeightView()
+        || this.getPosY() - this.getGameWorld().camera.getPosY() < -50)
+      return true;
+    else
+      return false;
+  }
 
   public Rectangle getBoundForCollisionWithMap() {
     Rectangle bound = new Rectangle();
@@ -177,21 +176,19 @@ public abstract class ParticularObject extends GameObject {
     switch (state) {
       case ALIVE:
 
-        // note: SET DAMAGE FOR OBJECT NO DAMAGE
-        // ParticularObject object =
-        // this.getGameWorld().particularObjectManager.getCollisionWidthEnemyObject(this);
-        // if (object != null) {
+        ParticularObject object = this.getGameWorld().particularObjectManager.getCollisionWidthEnemyObject(this);
+        if (object != null) {
 
-        // if (object.getDamage() > 0) {
+          if (object.getDamage() > 0) {
 
-        // // switch state to fey if object die
+            // đổi trạng thái sang fey nếu object bị die
 
-        // System.out.println("eat damage.... from collision with enemy........ " +
-        // object.getDamage());
-        // beHurt(object.getDamage());
-        // }
+            System.out.println("eat damage.... from collision with enemy........ " +
+                object.getDamage());
+            beHurt(object.getDamage());
+          }
 
-        // }
+        }
 
         break;
 

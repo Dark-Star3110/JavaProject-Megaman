@@ -86,9 +86,9 @@ public class Megaman extends Human {
 
     super.update();
 
-    if (isShooting) {
-      if (System.nanoTime() - lastShootingTime > 500 * 1000000) {
-        isShooting = false;
+    if (this.isShooting) {
+      if (System.nanoTime() - lastShootingTime > 500 * 1000000) { // hết thời gian viên đạn tồn tại 0.5s mới đc bắn tiếp
+        this.isShooting = false;
       }
     }
 
@@ -331,6 +331,40 @@ public class Megaman extends Human {
 
   @Override
   public void attack() {
+    if (!isShooting && !getIsDicking()) { // khác đang bắn or đang ngồi
+
+      // shooting1.play();
+
+      Bullet bullet = new BlueBullet(getPosX(), getPosY(), getGameWorld());
+      if (getDirection() == LEFT_DIR) {
+        // đứng yên bắn
+        bullet.setSpeedX(-10);
+        bullet.setPosX(bullet.getPosX() - 40);
+        // xét trường hợp đang vừa chạy vừa bắn
+        if (getSpeedX() != 0 && getSpeedY() == 0) {
+          bullet.setPosX(bullet.getPosX() - 10);
+          bullet.setPosY(bullet.getPosY() - 5);
+        }
+      } else {
+        bullet.setSpeedX(10);
+        bullet.setPosX(bullet.getPosX() + 40);
+        if (getSpeedX() != 0 && getSpeedY() == 0) {
+          bullet.setPosX(bullet.getPosX() + 10);
+          bullet.setPosY(bullet.getPosY() - 5);
+        }
+      }
+      if (getIsJumping()) {
+        // 20 = nhảy 5 + chiều cao đến tay nhân vật 15
+        bullet.setPosY(bullet.getPosY() - 20);
+      }
+
+      bullet.setTeamType(getTeamType()); // làm đau địch, ko gây sát thương với đồng minh
+      getGameWorld().bulletManager.addObject(bullet);
+
+      this.lastShootingTime = System.nanoTime();
+      this.isShooting = true;
+
+    }
   }
 
   @Override

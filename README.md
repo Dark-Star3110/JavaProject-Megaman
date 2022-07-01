@@ -1,4 +1,4 @@
-# Megaman Java
+# Naruto's Adventure Java
 
 ## Cấu trúc thư mục
 

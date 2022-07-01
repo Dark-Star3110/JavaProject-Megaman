@@ -1,0 +1,1123 @@
+
+155
+
+idle1
+image data/naruto/idle.png
+x 0
+y 0
+w 75
+h 90
+
+idleshoot1
+image data/naruto/flyingupshoot1.png
+x 0
+y 0
+w 75
+h 90
+
+idleshoot2
+image data/naruto/flyingupshoot2.png
+x 0
+y 0
+w 75
+h 90
+
+
+
+run1
+image data/naruto/run1.png
+x 0
+y 0
+w 75
+h 90
+
+run2
+image data/naruto/run2.png
+x 0
+y 0
+w 75
+h 90
+
+run3
+image data/naruto/run3.png
+x 0
+y 0
+w 75
+h 90
+
+run4
+image data/naruto/run4.png
+x 0
+y 0
+w 75
+h 90
+
+run5
+image data/naruto/run5.png
+x 0
+y 0
+w 75
+h 90
+
+run6
+image data/naruto/run6.png
+x 0
+y 0
+w 75
+h 90
+
+run7
+image data/naruto/run7.png
+x 0
+y 0
+w 75
+h 90
+
+run8
+image data/naruto/run8.png
+x 0
+y 0
+w 75
+h 90
+
+
+
+runshoot1
+image data/naruto/runshoot1.png
+x 0
+y 0
+w 75
+h 90
+
+runshoot2
+image data/naruto/runshoot2.png
+x 0
+y 0
+w 75
+h 90
+
+runshoot3
+image data/naruto/runshoot3.png
+x 0
+y 0
+w 75
+h 90
+
+runshoot4
+image data/naruto/runshoot4.png
+x 0
+y 0
+w 75
+h 90
+
+runshoot5
+image data/naruto/runshoot5.png
+x 0
+y 0
+w 75
+h 90
+
+runshoot6
+image data/naruto/runshoot6.png
+x 0
+y 0
+w 75
+h 90
+
+
+dick1
+image data/naruto/dick1.png
+x 0
+y 0
+w 75
+h 70
+
+dick2
+image data/naruto/dick2.png
+x 0
+y 0
+w 75
+h 70
+
+
+
+flyingup1
+image data/naruto/flyingup1.png
+x 0
+y 0
+w 75
+h 90
+
+flyingup2
+image data/naruto/flyingup2.png
+x 0
+y 0
+w 75
+h 90
+
+flyingup3
+image data/naruto/flyingup3.png
+x 0
+y 0
+w 75
+h 90
+
+flyingup4
+image data/naruto/flyingup4.png
+x 0
+y 0
+w 75
+h 90
+
+flyingup5
+image data/naruto/flyingup5.png
+x 0
+y 0
+w 75
+h 90
+
+flyingup6
+image data/naruto/flyingup6.png
+x 0
+y 0
+w 75
+h 90
+
+flyingup7
+image data/naruto/flyingup7.png
+x 0
+y 0
+w 75
+h 90
+
+flyingup8
+image data/naruto/flyingup8.png
+x 0
+y 0
+w 75
+h 90
+
+flyingup9
+image data/naruto/flyingup9.png
+x 0
+y 0
+w 75
+h 90
+
+flyingup10
+image data/naruto/flyingup10.png
+x 0
+y 0
+w 75
+h 90
+
+flyingup11
+image data/naruto/flyingup11.png
+x 0
+y 0
+w 75
+h 90
+
+flyingup12
+image data/naruto/flyingup12.png
+x 0
+y 0
+w 75
+h 90
+
+flyingup13
+image data/naruto/flyingup13.png
+x 0
+y 0
+w 75
+h 90
+
+
+
+
+flyingupshoot1
+image data/naruto/flyingupshoot1.png
+x 0
+y 0
+w 75
+h 90
+
+flyingupshoot2
+image data/naruto/flyingupshoot2.png
+x 0
+y 0
+w 75
+h 90
+
+flyingupshoot3
+image data/naruto/flyingupshoot3.png
+x 0
+y 0
+w 75
+h 90
+
+flyingupshoot4
+image data/naruto/flyingupshoot4.png
+x 0
+y 0
+w 75
+h 90
+
+
+
+
+landing1
+image data/naruto/idle.png
+x 0
+y 0
+w 75
+h 90
+
+
+
+hurting1
+image data/naruto/hurting1.png
+x 0
+y 0
+w 75
+h 90
+
+hurting2
+image data/naruto/hurting2.png
+x 0
+y 0
+w 75
+h 90
+
+hurting3
+image data/naruto/hurting3.png
+x 0
+y 0
+w 75
+h 90
+
+hurting4
+image data/naruto/hurting4.png
+x 0
+y 0
+w 75
+h 90
+
+hurting5
+image data/naruto/hurting5.png
+x 0
+y 0
+w 75
+h 90
+
+hurting6
+image data/naruto/hurting6.png
+x 0
+y 0
+w 75
+h 90
+
+hurting7
+image data/naruto/hurting7.png
+x 0
+y 0
+w 75
+h 90
+
+
+
+bullet1_1
+image data/naruto/bullet1_1.png
+x 0
+y 0
+w 75
+h 90
+
+bullet1_2
+image data/naruto/bullet1_2.png
+x 0
+y 0
+w 75
+h 90
+
+bullet1_3
+image data/naruto/bullet1_3.png
+x 0
+y 0
+w 75
+h 90
+
+
+
+
+bullet2_1
+image data/enemysprite1.png
+x 405
+y 351
+w 34
+h 34
+
+bullet2_2
+image data/enemysprite1.png
+x 449
+y 356
+w 25
+h 25
+
+bullet2_3
+image data/enemysprite1.png
+x 484
+y 354
+w 29
+h 29
+
+
+bullet3_1
+image data/enemysprite1.png
+x 173
+y 600
+w 11
+h 11
+
+bullet3_2
+image data/enemysprite1.png
+x 189
+y 598
+w 15
+h 15
+
+bullet3_3
+image data/enemysprite1.png
+x 214
+y 598
+w 17
+h 17
+
+bullet3_4
+image data/enemysprite1.png
+x 240
+y 594
+w 23
+h 23
+
+bullet4_1
+image data/enemysprite1.png
+x 13
+y 771
+w 17
+h 17
+
+bullet4_2
+image data/enemysprite1.png
+x 33
+y 770
+w 19
+h 19
+
+bullet4_3
+image data/enemysprite1.png
+x 56
+y 767
+w 24
+h 24
+
+
+
+bullet5_1
+image data/enemysprite1.png
+x 518
+y 666
+w 47
+h 47
+
+bullet5_2
+image data/enemysprite1.png
+x 579
+y 666
+w 47
+h 47
+
+bullet5_3
+image data/enemysprite1.png
+x 638
+y 666
+w 47
+h 47
+
+
+
+
+gun_emplacement1
+image data/enemysprite1.png
+x 60
+y 37
+w 80
+h 105
+
+
+
+
+tiled1
+image data/tiled.png
+x 15
+y 154
+w 30
+h 30
+
+tiled2
+image data/tiled.png
+x 45
+y 154
+w 30
+h 30
+
+tiled3
+image data/tiled.png
+x 75
+y 154
+w 30
+h 30
+
+tiled4
+image data/tiled.png
+x 15
+y 184
+w 30
+h 30
+
+tiled5
+image data/tiled.png
+x 45
+y 184
+w 30
+h 30
+
+tiled6
+image data/tiled.png
+x 75
+y 184
+w 30
+h 30
+
+tiled7
+image data/tiled.png
+x 15
+y 119
+w 30
+h 30
+
+tiled8
+image data/tiled.png
+x 45
+y 119
+w 30
+h 30
+
+tiled9
+image data/tiled.png
+x 75
+y 119
+w 30
+h 30
+
+tiled10
+image data/tiled.png
+x 15
+y 81
+w 30
+h 30
+
+tiled11
+image data/tiled.png
+x 45
+y 81
+w 30
+h 30
+
+tiled12
+image data/tiled.png
+x 75
+y 81
+w 30
+h 30
+
+tiled13
+image data/tiled.png
+x 119
+y 81
+w 30
+h 30
+
+tiled14
+image data/tiled.png
+x 119
+y 111
+w 30
+h 30
+
+tiled15
+image data/tiled.png
+x 15
+y 39
+w 30
+h 30
+
+tiled16
+image data/tiled.png
+x 45
+y 39
+w 30
+h 30
+
+tiled17
+image data/tiled.png
+x 75
+y 39
+w 30
+h 30
+
+tiled18
+image data/tiled.png
+x 118
+y 154
+w 30
+h 30
+
+tiled19
+image data/tiled.png
+x 148
+y 154
+w 30
+h 30
+
+tiled20
+image data/tiled.png
+x 178
+y 154
+w 30
+h 30
+
+tiled21
+image data/tiled.png
+x 208
+y 154
+w 30
+h 30
+
+tiled22
+image data/tiled.png
+x 238
+y 154
+w 30
+h 30
+
+tiled23
+image data/tiled.png
+x 268
+y 154
+w 30
+h 30
+
+tiled24
+image data/tiled.png
+x 118
+y 184
+w 30
+h 30
+
+tiled25
+image data/tiled.png
+x 148
+y 184
+w 30
+h 30
+
+tiled26
+image data/tiled.png
+x 178
+y 184
+w 30
+h 30
+
+tiled27
+image data/tiled.png
+x 208
+y 184
+w 30
+h 30
+
+tiled28
+image data/tiled.png
+x 238
+y 184
+w 30
+h 30
+
+tiled29
+image data/tiled.png
+x 268
+y 184
+w 30
+h 30
+
+tiled30
+image data/tiled.png
+x 118
+y 214
+w 30
+h 30
+
+tiled31
+image data/tiled.png
+x 148
+y 214
+w 30
+h 30
+
+tiled32
+image data/tiled.png
+x 178
+y 214
+w 30
+h 30
+
+tiled33
+image data/tiled.png
+x 208
+y 214
+w 30
+h 30
+
+tiled34
+image data/tiled.png
+x 238
+y 214
+w 30
+h 30
+
+tiled35
+image data/tiled.png
+x 268
+y 214
+w 30
+h 30
+
+tiled36
+image data/tiled.png
+x 118
+y 244
+w 30
+h 30
+
+tiled37
+image data/tiled.png
+x 148
+y 244
+w 30
+h 30
+
+tiled38
+image data/tiled.png
+x 178
+y 244
+w 30
+h 30
+
+tiled39
+image data/tiled.png
+x 208
+y 244
+w 30
+h 30
+
+tiled40
+image data/tiled.png
+x 238
+y 244
+w 30
+h 30
+
+tiled41
+image data/tiled.png
+x 268
+y 244
+w 30
+h 30
+
+tiled42
+image data/tiled.png
+x 159
+y 51
+w 30
+h 30
+
+tiled43
+image data/tiled.png
+x 159
+y 81
+w 30
+h 30
+
+tiled44
+image data/tiled.png
+x 159
+y 111
+w 30
+h 30
+
+tiled45
+image data/tiled.png
+x 198
+y 80
+w 30
+h 30
+
+tiled46
+image data/tiled.png
+x 198
+y 110
+w 30
+h 30
+
+tiled47
+image data/tiled.png
+x 236
+y 110
+w 30
+h 30
+
+tiled48
+image data/tiled.png
+x 236
+y 81
+w 30
+h 30
+
+tiled49
+image data/tiled.png
+x 16
+y 220
+w 30
+h 30
+
+tiled50
+image data/tiled.png
+x 16
+y 250
+w 30
+h 30
+
+clim_wall
+image data/naruto/idle.png
+x 0
+y 0
+w 75
+h 90
+
+
+bug1
+image data/bug/bug1.png
+x 0
+y 0
+w 100
+h 90
+
+bug2
+image data/bug/bug2.png
+x 0
+y 0
+w 100
+h 90
+
+bug3
+image data/bug/bug3.png
+x 0
+y 0
+w 100
+h 90
+
+bug4
+image data/bug/bug4.png
+x 0
+y 0
+w 100
+h 90
+
+bug5
+image data/bug/bug5.png
+x 0
+y 0
+w 100
+h 90
+
+bug6
+image data/bug/bug6.png
+x 0
+y 0
+w 100
+h 90
+
+
+spider1
+image data/spider/spider1.png
+x 0
+y 0
+w 100
+h 90
+
+spider2
+image data/spider/spider2.png
+x 0
+y 0
+w 100
+h 90
+
+spider3
+image data/spider/spider3.png
+x 0
+y 0
+w 100
+h 90
+
+spider4
+image data/spider/spider4.png
+x 0
+y 0
+w 100
+h 90
+
+spider5
+image data/spider/spider5.png
+x 0
+y 0
+w 100
+h 90
+
+spider6
+image data/spider/spider6.png
+x 0
+y 0
+w 100
+h 90
+
+spider7
+image data/spider/spider7.png
+x 0
+y 0
+w 100
+h 90
+
+spider8
+image data/spider/spider8.png
+x 0
+y 0
+w 100
+h 90
+
+
+avatar
+image data/megasprite.png
+x 1040
+y 490
+w 250
+h 210
+
+smallredgun1
+image data/enemysprite1.png
+x 87
+y 587
+w 60
+h 39
+
+
+
+dangerousgirl1
+image data/enemysprite1.png
+x 0
+y 114
+w 100
+h 97
+
+dangerousgirl2
+image data/enemysprite1.png
+x 109
+y 114
+w 99
+h 97
+
+dangerousgirl3
+image data/enemysprite1.png
+x 234
+y 114
+w 70
+h 97
+
+dangerousgirl4
+image data/enemysprite1.png
+x 338
+y 114
+w 106
+h 97
+
+dangerousgirl5
+image data/enemysprite1.png
+x 436
+y 114
+w 104
+h 97
+
+dangerousgirl6
+image data/enemysprite1.png
+x 546
+y 114
+w 109
+h 97
+
+dangerousgirl7
+image data/enemysprite1.png
+x 670
+y 114
+w 76
+h 97
+
+dangerousgirl8
+image data/enemysprite1.png
+x 768
+y 114
+w 82
+h 97
+
+robotR1
+image data/enemysprite1.png
+x 491
+y 536
+w 100
+h 114
+
+robotR2
+image data/enemysprite1.png
+x 606
+y 536
+w 100
+h 114
+
+robotR3
+image data/enemysprite1.png
+x 723
+y 536
+w 100
+h 114
+
+
+rocketUp1
+image data/enemysprite2.png
+x 24
+y 146
+w 33
+h 33
+
+rocket1
+image data/enemysprite2.png
+x 24
+y 189
+w 33
+h 26
+
+rocketDown1
+image data/enemysprite2.png
+x 24
+y 223
+w 33
+h 33
+
+
+boss_idle1
+image data/enemysprite2.png
+x 290
+y 100
+w 105
+h 163
+
+boss_idle2
+image data/enemysprite2.png
+x 405
+y 100
+w 105
+h 163
+
+boss_idle3
+image data/enemysprite2.png
+x 518
+y 100
+w 110
+h 163
+
+boss_idle4
+image data/enemysprite2.png
+x 637
+y 100
+w 115
+h 163
+
+boss_idle5
+image data/enemysprite2.png
+x 766
+y 100
+w 120
+h 163
+
+boss_shooting1
+image data/enemysprite2.png
+x 730
+y 748
+w 150
+h 180
+
+boss_shooting2
+image data/enemysprite2.png
+x 889
+y 748
+w 150
+h 180
+
+boss_slide1
+image data/enemysprite2.png
+x 220
+y 660
+w 166
+h 67
+
+boss_slide2
+image data/enemysprite2.png
+x 396
+y 660
+w 166
+h 67
+
+boss_slide3
+image data/enemysprite2.png
+x 566
+y 660
+w 166
+h 67
+
+boss_slide4
+image data/enemysprite2.png
+x 736
+y 660
+w 166
+h 67
+
+hearth
+image data/megasprite.png
+x 35
+y 1388
+w 30
+h 30
+
+gamewin
+image data/textgame.png
+x 80
+y 60
+w 440
+h 60

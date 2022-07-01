@@ -29,7 +29,7 @@ public class Camera extends GameObject {
     // boss)
     if (!isLocked) {
 
-      Megaman mainCharacter = getGameWorld().megaman;
+      Naruto mainCharacter = this.getGameWorld().naruto;
       // 200 và 400 là khoảng tối ưu để camera theo dõi nhân vật
       if (mainCharacter.getPosX() - this.getPosX() > 400)
         this.setPosX(mainCharacter.getPosX() - 400);

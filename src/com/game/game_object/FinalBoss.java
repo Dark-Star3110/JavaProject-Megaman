@@ -51,7 +51,7 @@ public class FinalBoss extends Human {
   public void update() {
     super.update();
 
-    if (getGameWorld().megaman.getPosX() > getPosX())
+    if (getGameWorld().naruto.getPosX() > getPosX())
       setDirection(RIGHT_DIR);
     else
       setDirection(LEFT_DIR);
@@ -128,7 +128,7 @@ public class FinalBoss extends Human {
         attackIndex = 0;
 
       if (attackType[attackIndex].equals("slide")) {
-        if (getPosX() < getGameWorld().megaman.getPosX())
+        if (getPosX() < getGameWorld().naruto.getPosX())
           setSpeedX(5);
         else
           setSpeedX(-5);

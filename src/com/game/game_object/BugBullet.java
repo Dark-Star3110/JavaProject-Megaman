@@ -6,14 +6,14 @@ import com.game.effect.CacheDataLoader;
 import java.awt.Rectangle;
 import java.awt.Graphics2D;
 
-public class RedEyeBullet extends Bullet {
+public class BugBullet extends Bullet {
 
     private Animation forwardBulletAnim, backBulletAnim;
 
-    public RedEyeBullet(float x, float y, GameWorld gameWorld) {
+    public BugBullet(float x, float y, GameWorld gameWorld) {
         super(x, y, 30, 30, 1.0f, 10, gameWorld);
-        forwardBulletAnim = CacheDataLoader.getInstance().getAnimation("redeyebullet");
-        backBulletAnim = CacheDataLoader.getInstance().getAnimation("redeyebullet");
+        forwardBulletAnim = CacheDataLoader.getInstance().getAnimation("bugbullet");
+        backBulletAnim = CacheDataLoader.getInstance().getAnimation("bugbullet");
         backBulletAnim.flipAllImage();
     }
 

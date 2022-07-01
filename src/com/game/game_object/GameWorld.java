@@ -14,7 +14,7 @@ public class GameWorld {
   private BufferedImage bufferedImage;
   private int lastState;
 
-  public Megaman megaman;
+  public Naruto naruto;
   public PhysicalMap physicalMap;
   public BackgroundMap backgroundMap;
   public ParticularObjectManager particularObjectManager;
@@ -64,13 +64,13 @@ public class GameWorld {
 
     bufferedImage = new BufferedImage(GameFrame.SCREEN_WIDTH, GameFrame.SCREEN_HEIGHT, BufferedImage.TYPE_INT_ARGB);
 
-    this.megaman = new Megaman(300, 300, this);
-    this.megaman.setTeamType(ParticularObject.LEAGUE_TEAM);
+    this.naruto = new Naruto(300, 300, this);
+    this.naruto.setTeamType(ParticularObject.LEAGUE_TEAM);
     this.physicalMap = new PhysicalMap(0, 0, this);
     this.backgroundMap = new BackgroundMap(0, 0, this);
     this.camera = new Camera(0, 50, GameFrame.SCREEN_WIDTH, GameFrame.SCREEN_HEIGHT, this);
     this.particularObjectManager = new ParticularObjectManager(this);
-    this.particularObjectManager.addObject(megaman);
+    this.particularObjectManager.addObject(naruto);
     this.bulletManager = new BulletManager(this);
 
     initEnemies();
@@ -79,25 +79,34 @@ public class GameWorld {
   }
 
   private void initEnemies() {
-    ParticularObject redeye = new RedEyeDevil(1250, 410, this);
-    redeye.setDirection(ParticularObject.LEFT_DIR);
-    redeye.setTeamType(ParticularObject.ENEMY_TEAM);
-    particularObjectManager.addObject(redeye);
+    ParticularObject spider = new Spider(1250, 410, this);
+    spider.setDirection(ParticularObject.LEFT_DIR);
+    spider.setTeamType(ParticularObject.ENEMY_TEAM);
+    particularObjectManager.addObject(spider);
 
-    ParticularObject redeye2 = new RedEyeDevil(2500, 500, this);
-    redeye2.setDirection(ParticularObject.LEFT_DIR);
-    redeye2.setTeamType(ParticularObject.ENEMY_TEAM);
-    particularObjectManager.addObject(redeye2);
+    ParticularObject spider2 = new Spider(2500, 500, this);
+    spider2.setDirection(ParticularObject.LEFT_DIR);
+    spider2.setTeamType(ParticularObject.ENEMY_TEAM);
+    particularObjectManager.addObject(spider2);
 
-    ParticularObject redeye3 = new RedEyeDevil(3450, 500, this);
-    redeye3.setDirection(ParticularObject.LEFT_DIR);
-    redeye3.setTeamType(ParticularObject.ENEMY_TEAM);
-    particularObjectManager.addObject(redeye3);
+    ParticularObject spider3 = new Spider(3450, 500, this);
+    spider3.setDirection(ParticularObject.LEFT_DIR);
+    spider3.setTeamType(ParticularObject.ENEMY_TEAM);
+    particularObjectManager.addObject(spider3);
 
-    ParticularObject redeye4 = new RedEyeDevil(500, 1190, this);
-    redeye4.setDirection(ParticularObject.RIGHT_DIR);
-    redeye4.setTeamType(ParticularObject.ENEMY_TEAM);
-    particularObjectManager.addObject(redeye4);
+    ParticularObject spider4 = new Spider(500, 1190, this);
+    spider4.setDirection(ParticularObject.RIGHT_DIR);
+    spider4.setTeamType(ParticularObject.ENEMY_TEAM);
+    particularObjectManager.addObject(spider4);
+
+    // bug
+    ParticularObject darkraise = new Bug(2000, 200, this);
+    darkraise.setTeamType(ParticularObject.ENEMY_TEAM);
+    particularObjectManager.addObject(darkraise);
+
+    ParticularObject darkraise2 = new Bug(2800, 350, this);
+    darkraise2.setTeamType(ParticularObject.ENEMY_TEAM);
+    particularObjectManager.addObject(darkraise2);
 
   }
 
@@ -131,18 +140,18 @@ public class GameWorld {
             camera.setPosX(camera.getPosX() + 2);
           }
 
-          if (megaman.getPosX() < finalBossX + 150) {
-            megaman.setDirection(ParticularObject.RIGHT_DIR);
-            megaman.run();
-            megaman.update();
+          if (naruto.getPosX() < finalBossX + 150) {
+            naruto.setDirection(ParticularObject.RIGHT_DIR);
+            naruto.run();
+            naruto.update();
           } else {
-            megaman.stopRun();
+            naruto.stopRun();
           }
 
-          if (openIntroGameY < 450 && camera.getPosX() >= finalBossX && megaman.getPosX() >= finalBossX + 150) {
+          if (openIntroGameY < 450 && camera.getPosX() >= finalBossX && naruto.getPosX() >= finalBossX + 150) {
             camera.lock();
             storyTutorial++;
-            megaman.stopRun();
+            naruto.stopRun();
             physicalMap.phys_map[14][120] = 1;
             physicalMap.phys_map[15][120] = 1;
             physicalMap.phys_map[16][120] = 1;
@@ -220,7 +229,7 @@ public class GameWorld {
         physicalMap.update();
         camera.update();
 
-        if (megaman.getPosX() > finalBossX && finalbossTrigger) {
+        if (naruto.getPosX() > finalBossX && finalbossTrigger) {
           finalbossTrigger = false;
           switchState(TUTORIAL);
           tutorialState = MEETFINALBOSS;
@@ -234,13 +243,13 @@ public class GameWorld {
 
         }
 
-        if (megaman.getState() == ParticularObject.DEATH) {
+        if (naruto.getState() == ParticularObject.DEATH) {
           numberOfLife--;
           if (numberOfLife >= 0) {
-            megaman.setBlood(100);
-            megaman.setPosY(megaman.getPosY() - 50);
-            megaman.setState(ParticularObject.NOBEHURT);
-            particularObjectManager.addObject(megaman);
+            naruto.setBlood(100);
+            naruto.setPosY(naruto.getPosY() - 50);
+            naruto.setState(ParticularObject.NOBEHURT);
+            particularObjectManager.addObject(naruto);
           } else {
             switchState(GAMEOVER);
             bgMusic.stop();
@@ -301,7 +310,7 @@ public class GameWorld {
           g2.setColor(Color.GRAY);
           g2.fillRect(19, 59, 102, 22);
           g2.setColor(Color.red);
-          g2.fillRect(20, 60, megaman.getBlood(), 20);
+          g2.fillRect(20, 60, naruto.getBlood(), 20);
 
           for (int i = 0; i < numberOfLife; i++) {
             g2.drawImage(CacheDataLoader.getInstance().getFrameImage("hearth").getImage(), 20 + i * 40, 18, null);

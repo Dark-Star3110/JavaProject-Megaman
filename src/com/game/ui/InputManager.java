@@ -22,18 +22,18 @@ public class InputManager {
       case KeyEvent.VK_DOWN:
         // System.out.println("down");
         // this.gameWorld.physicalMap.y += 3;
-        this.gameWorld.megaman.dick();
+        this.gameWorld.naruto.dick();
         break;
       case KeyEvent.VK_LEFT:
         // System.out.println("left");
-        this.gameWorld.megaman.setDirection(ParticularObject.LEFT_DIR);
-        this.gameWorld.megaman.run();
+        this.gameWorld.naruto.setDirection(ParticularObject.LEFT_DIR);
+        this.gameWorld.naruto.run();
         // this.gameWorld.physicalMap.x -= 3;
         break;
       case KeyEvent.VK_RIGHT:
         // System.out.println("right");
-        this.gameWorld.megaman.setDirection(ParticularObject.RIGHT_DIR);
-        this.gameWorld.megaman.run();
+        this.gameWorld.naruto.setDirection(ParticularObject.RIGHT_DIR);
+        this.gameWorld.naruto.run();
         // this.gameWorld.physicalMap.x += 3;
         break;
       case KeyEvent.VK_ENTER:
@@ -62,10 +62,10 @@ public class InputManager {
         }
         break;
       case KeyEvent.VK_SPACE:
-        this.gameWorld.megaman.jump();
+        this.gameWorld.naruto.jump();
         break;
       case KeyEvent.VK_A:
-        this.gameWorld.megaman.attack();
+        this.gameWorld.naruto.attack();
         break;
     }
   }
@@ -77,16 +77,16 @@ public class InputManager {
         break;
       case KeyEvent.VK_DOWN:
         // System.out.println("down");
-        this.gameWorld.megaman.standUp();
+        this.gameWorld.naruto.standUp();
         break;
       case KeyEvent.VK_LEFT:
-        if (this.gameWorld.megaman.getSpeedX() < 0) {
-          this.gameWorld.megaman.stopRun();
+        if (this.gameWorld.naruto.getSpeedX() < 0) {
+          this.gameWorld.naruto.stopRun();
         }
         break;
       case KeyEvent.VK_RIGHT:
-        if (this.gameWorld.megaman.getSpeedX() > 0) {
-          this.gameWorld.megaman.stopRun();
+        if (this.gameWorld.naruto.getSpeedX() > 0) {
+          this.gameWorld.naruto.stopRun();
         }
         break;
       case KeyEvent.VK_ENTER:
@@ -98,7 +98,7 @@ public class InputManager {
         // }
         break;
       case KeyEvent.VK_SPACE:
-        // this.gameWorld.megaman.setSpeedY(0);
+        // this.gameWorld.naruto.setSpeedY(0);
         break;
       case KeyEvent.VK_A:
         break;

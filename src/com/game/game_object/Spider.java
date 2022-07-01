@@ -7,17 +7,17 @@ import java.awt.Rectangle;
 import java.applet.AudioClip;
 import java.awt.Graphics2D;
 
-public class RedEyeDevil extends ParticularObject {
+public class Spider extends ParticularObject {
   private Animation forwardAnim, backAnim;
 
   private long startTimeToShoot;
 
   private AudioClip shooting;
 
-  public RedEyeDevil(float x, float y, GameWorld gameWorld) {
+  public Spider(float x, float y, GameWorld gameWorld) {
     super(x, y, 127, 89, 0, 100, gameWorld);
-    backAnim = CacheDataLoader.getInstance().getAnimation("redeye");
-    forwardAnim = CacheDataLoader.getInstance().getAnimation("redeye");
+    backAnim = CacheDataLoader.getInstance().getAnimation("spider");
+    forwardAnim = CacheDataLoader.getInstance().getAnimation("spider");
     forwardAnim.flipAllImage();
     startTimeToShoot = 0;
     setDamage(10);
@@ -29,7 +29,7 @@ public class RedEyeDevil extends ParticularObject {
   public void attack() {
 
     shooting.play();
-    Bullet bullet = new RedEyeBullet(this.getPosX(), this.getPosY(), this.getGameWorld());
+    Bullet bullet = new BugBullet(this.getPosX(), this.getPosY(), this.getGameWorld());
     if (getDirection() == LEFT_DIR)
       bullet.setSpeedX(-8);
     else

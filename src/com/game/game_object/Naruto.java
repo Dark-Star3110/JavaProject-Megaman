@@ -8,7 +8,7 @@ import com.game.effect.CacheDataLoader;
 
 import java.awt.Graphics2D;
 
-public class Megaman extends Human {
+public class Naruto extends Human {
 
   public static final int RUNSPEED = 3;
 
@@ -26,8 +26,8 @@ public class Megaman extends Human {
   private AudioClip hurtingSound;
   private AudioClip shooting1;
 
-  public Megaman(float x, float y, GameWorld gameWorld) {
-    super(x, y, 70, 90, 0.1f, 100, gameWorld);
+  public Naruto(float x, float y, GameWorld gameWorld) {
+    super(x, y, 75, 90, 0.1f, 100, gameWorld);
 
     shooting1 = CacheDataLoader.getInstance().getSound("bluefireshooting");
     hurtingSound = CacheDataLoader.getInstance().getSound("megamanhurt");
@@ -111,7 +111,7 @@ public class Megaman extends Human {
       rect.x = (int) getPosX() - 22;
       rect.y = (int) getPosY() - 20;
       rect.width = 44;
-      rect.height = 65;
+      rect.height = 65; // ne chieu
     } else {
       rect.x = (int) getPosX() - 22;
       rect.y = (int) getPosY() - 40;

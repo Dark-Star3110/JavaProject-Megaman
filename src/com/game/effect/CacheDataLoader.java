@@ -18,8 +18,10 @@ public class CacheDataLoader {
 
   private static CacheDataLoader instance = null;
 
-  private String frameFile = "data/frame.txt";
-  private String animationFile = "data/animation.txt";
+  // private String frameFile = "data/frame.txt";
+  private String frameFile = "data/narutoframe.txt";
+  // private String animationFile = "data/animation.txt";
+  private String animationFile = "data/narutoanimation.txt";
   private String physmapFile = "data/phys_map.txt";
   private String backgroundmapFile = "data/background_map.txt";
   private String soundFile = "data/sounds.txt";
@@ -165,6 +167,7 @@ public class CacheDataLoader {
 
         while ((line = br.readLine()).equals(""))
           ;
+        System.out.println(line);
         animation.setName(line);
 
         while ((line = br.readLine()).equals(""))
@@ -246,6 +249,14 @@ public class CacheDataLoader {
         if (refreshImage) {
           refreshImage = false;
           imageData = ImageIO.read(new File(path));
+          // nếu gặp image ko đúng kiểu sprite
+          int imageType = imageData.getType();
+          if (imageType == 0) {
+            BufferedImage convertedImg = new BufferedImage(imageData.getWidth(), imageData.getHeight(),
+                BufferedImage.TYPE_USHORT_565_RGB);
+            convertedImg.getGraphics().drawImage(imageData, 0, 0, null);
+            imageData = convertedImg;
+          }
         }
         if (imageData != null) {
           BufferedImage image = imageData.getSubimage(x, y, w, h);

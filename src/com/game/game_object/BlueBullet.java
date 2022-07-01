@@ -28,20 +28,17 @@ public class BlueBullet extends Bullet {
     if (getSpeedX() > 0) {
       // theo image megasprite thì 3 frame đầu là ảnh đạn nổ lúc ra khỏi nòng => nổ 1
       // lần rồi ignore nó đi,chỉ lặp lại animation đạn bay
-      if (!forwardBulletAnim.isIgnoreFrame(0) && forwardBulletAnim.getCurrentFrame() == 3) {
+      if (!forwardBulletAnim.isIgnoreFrame(0) &&
+          forwardBulletAnim.getCurrentFrame() == 1) {
         forwardBulletAnim.setIgnoreFrame(0);
-        forwardBulletAnim.setIgnoreFrame(1);
-        forwardBulletAnim.setIgnoreFrame(2);
       }
 
       forwardBulletAnim.update(System.nanoTime());
       forwardBulletAnim.draw((int) (getPosX() - getGameWorld().camera.getPosX()),
           (int) getPosY() - (int) getGameWorld().camera.getPosY(), g2);
     } else {
-      if (!backBulletAnim.isIgnoreFrame(0) && backBulletAnim.getCurrentFrame() == 3) {
+      if (!backBulletAnim.isIgnoreFrame(0) && backBulletAnim.getCurrentFrame() == 1) {
         backBulletAnim.setIgnoreFrame(0);
-        backBulletAnim.setIgnoreFrame(1);
-        backBulletAnim.setIgnoreFrame(2);
       }
       backBulletAnim.update(System.nanoTime());
       backBulletAnim.draw((int) (this.getPosX() - getGameWorld().camera.getPosX()),

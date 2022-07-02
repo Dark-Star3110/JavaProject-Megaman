@@ -59,7 +59,7 @@ public class GameWorld {
     texts1[1] = "There was a Monster from University on Earth in 10 years\n"
         + "and we lived in the scare in that 10 years....";
     texts1[2] = "Now is the time for us, kill it and get freedom!....";
-    texts1[3] = "      LET'S GO!.....";
+    texts1[3] = "      ÉT O ÉT!.....";
     textTutorial = texts1[0];
 
     bufferedImage = new BufferedImage(GameFrame.SCREEN_WIDTH, GameFrame.SCREEN_HEIGHT, BufferedImage.TYPE_INT_ARGB);
@@ -100,13 +100,33 @@ public class GameWorld {
     particularObjectManager.addObject(spider4);
 
     // bug
-    ParticularObject darkraise = new Bug(2000, 200, this);
-    darkraise.setTeamType(ParticularObject.ENEMY_TEAM);
-    particularObjectManager.addObject(darkraise);
+    ParticularObject bug = new Bug(2000, 200, this);
+    bug.setTeamType(ParticularObject.ENEMY_TEAM);
+    particularObjectManager.addObject(bug);
 
-    ParticularObject darkraise2 = new Bug(2800, 350, this);
-    darkraise2.setTeamType(ParticularObject.ENEMY_TEAM);
-    particularObjectManager.addObject(darkraise2);
+    ParticularObject bug2 = new Bug(2800, 350, this);
+    bug2.setTeamType(ParticularObject.ENEMY_TEAM);
+    particularObjectManager.addObject(bug2);
+
+    // bat
+    ParticularObject bat = new Bat(1650, 950, this);
+    bat.setDirection(ParticularObject.LEFT_DIR);
+    bat.setTeamType(ParticularObject.ENEMY_TEAM);
+    particularObjectManager.addObject(bat);
+
+    // bird
+
+    ParticularObject bird = new Bird(900, 400, this);
+    bird.setTeamType(ParticularObject.ENEMY_TEAM);
+    particularObjectManager.addObject(bird);
+
+    ParticularObject bird2 = new Bird(3400, 350, this);
+    bird2.setTeamType(ParticularObject.ENEMY_TEAM);
+    particularObjectManager.addObject(bird2);
+
+    ParticularObject bird3 = new Bird(1500, 1150, this);
+    bird3.setTeamType(ParticularObject.ENEMY_TEAM);
+    particularObjectManager.addObject(bird3);
 
   }
 
@@ -164,9 +184,9 @@ public class GameWorld {
           }
 
         } else {
-
-          if (currentSize < textTutorial.length())
+          if (currentSize < textTutorial.length()) {
             currentSize++;
+          }
         }
         break;
     }
@@ -189,7 +209,7 @@ public class GameWorld {
         g2.fillRect(0, y2, GameFrame.SCREEN_WIDTH, GameFrame.SCREEN_HEIGHT / 2);
 
         if (storyTutorial >= 1) {
-          g2.drawImage(avatar.getImage(), 600, 350, null);
+          g2.drawImage(avatar.getImage(), 600, 250, null);
           g2.setColor(Color.BLUE);
           g2.fillRect(280, 450, 350, 80);
           g2.setColor(Color.WHITE);
@@ -285,18 +305,20 @@ public class GameWorld {
           g2.setColor(Color.BLACK);
           g2.fillRect(0, 0, GameFrame.SCREEN_WIDTH, GameFrame.SCREEN_HEIGHT);
           g2.setColor(Color.WHITE);
-          g2.drawString("PRESS ENTER TO CONTINUE", 400, 300);
+          g2.drawString("NHẤN ENTER ĐỂ TIẾP TỤC", 400, 300);
           break;
         case PAUSEGAME:
           g2.setColor(Color.BLACK);
           g2.fillRect(300, 260, 500, 70);
           g2.setColor(Color.WHITE);
-          g2.drawString("PRESS ENTER TO CONTINUE", 400, 300);
+          g2.drawString("NHẤN ENTER ĐỂ TIẾP TỤC", 400, 300);
           break;
         case TUTORIAL:
           backgroundMap.draw(g2);
           if (tutorialState == MEETFINALBOSS) {
             particularObjectManager.draw(g2);
+            g2.drawImage(CacheDataLoader.getInstance().getFrameImage("finalboss").getImage(), 350, 60, null);
+            g2.drawString("NHẤN ENTER ĐỂ TIẾP TỤC", 400, 300);
           }
           TutorialRender(g2);
 

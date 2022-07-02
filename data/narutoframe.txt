@@ -1,5 +1,5 @@
 
-155
+160
 
 idle1
 image data/naruto/idle.png
@@ -916,18 +916,39 @@ h 90
 
 
 avatar
-image data/megasprite.png
-x 1040
-y 490
-w 250
-h 210
+image data/chgZg.png
+x 0
+y 0
+w 200
+h 400
 
-smallredgun1
-image data/enemysprite1.png
-x 87
-y 587
-w 60
-h 39
+bat1
+image data/bat/bat1.png
+x 0
+y 0
+w 100
+h 50
+
+bat2
+image data/bat/bat2.png
+x 0
+y 0
+w 100
+h 50
+
+bat3
+image data/bat/bat3.png
+x 0
+y 0
+w 100
+h 50
+
+bat4
+image data/bat/bat4.png
+x 0
+y 0
+w 100
+h 50
 
 
 
@@ -987,26 +1008,33 @@ y 114
 w 82
 h 97
 
-robotR1
-image data/enemysprite1.png
-x 491
-y 536
+bird1
+image data/bird/bird1.png
+x 0
+y 0
 w 100
-h 114
+h 70
 
-robotR2
-image data/enemysprite1.png
-x 606
-y 536
+bird2
+image data/bird/bird2.png
+x 0
+y 0
 w 100
-h 114
+h 70
 
-robotR3
-image data/enemysprite1.png
-x 723
-y 536
+bird3
+image data/bird/bird3.png
+x 0
+y 0
 w 100
-h 114
+h 70
+
+bird4
+image data/bird/bird4.png
+x 0
+y 0
+w 100
+h 70
 
 
 rocketUp1
@@ -1114,6 +1142,13 @@ x 35
 y 1388
 w 30
 h 30
+
+finalboss
+image data/Final_Boss_logo.png
+x 0
+y 0
+w 300
+h 209
 
 gamewin
 image data/textgame.png

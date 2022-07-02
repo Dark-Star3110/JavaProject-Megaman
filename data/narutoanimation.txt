@@ -48,8 +48,8 @@ clim_wall 10000000
 bug
 bug1 170000000 bug2 170000000 bug3 170000000 bug4 170000000 bug5 170000000 bug6 170000000
 
-smallredgun
-smallredgun1 170000000
+bat
+bat1 170000000 bat2 170000000 bat3 170000000 bat4 170000000
 
 spider
 spider1 120000000 spider2 120000000 spider3 120000000 spider4 120000000 spider5 120000000 spider6 120000000 spider7 120000000 spider8 120000000
@@ -57,10 +57,10 @@ spider1 120000000 spider2 120000000 spider3 120000000 spider4 120000000 spider5 
 dangerousgirl
 dangerousgirl1 70000000 dangerousgirl2 70000000 dangerousgirl3 70000000 dangerousgirl4 70000000 dangerousgirl5 70000000 dangerousgirl6 70000000 dangerousgirl7 70000000 dangerousgirl8 70000000
 
-robotR
-robotR1 70000000 robotR2 70000000 robotR3 70000000 robotR2 70000000
+bird
+bird1 70000000 bird2 70000000 bird3 70000000 bird4 70000000
 
-robotRbullet
+violetbullet
 bullet5_1 70000000 bullet5_2 70000000 bullet5_3 70000000
 
 rocketUp

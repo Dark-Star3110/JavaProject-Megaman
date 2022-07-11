@@ -22,14 +22,14 @@ public class Spider extends ParticularObject {
     startTimeToShoot = 0;
     setDamage(10);
     setTimeForNoBehurt(300000000); // bất tử 0.3s
-    shooting = CacheDataLoader.getInstance().getSound("redeyeshooting");
+    shooting = CacheDataLoader.getInstance().getSound("spidershooting");
   }
 
   @Override
   public void attack() {
 
     shooting.play();
-    Bullet bullet = new BugBullet(this.getPosX(), this.getPosY(), this.getGameWorld());
+    Bullet bullet = new SpiderBullet(this.getPosX(), this.getPosY(), this.getGameWorld());
     if (getDirection() == LEFT_DIR)
       bullet.setSpeedX(-8);
     else

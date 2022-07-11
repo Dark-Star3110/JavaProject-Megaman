@@ -8,8 +8,8 @@ import java.awt.Rectangle;
 
 public abstract class ParticularObject extends GameObject {
 
-  public static final int LEAGUE_TEAM = 1; // hp team mình
-  public static final int ENEMY_TEAM = 2; // hp team địch
+  public static final int LEAGUE_TEAM = 1; // team mình
+  public static final int ENEMY_TEAM = 2; // team địch
 
   public static final int LEFT_DIR = 0;
   public static final int RIGHT_DIR = 1;

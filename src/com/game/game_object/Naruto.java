@@ -29,8 +29,8 @@ public class Naruto extends Human {
   public Naruto(float x, float y, GameWorld gameWorld) {
     super(x, y, 75, 90, 0.1f, 100, gameWorld);
 
-    shooting1 = CacheDataLoader.getInstance().getSound("bluefireshooting");
-    hurtingSound = CacheDataLoader.getInstance().getSound("megamanhurt");
+    shooting1 = CacheDataLoader.getInstance().getSound("rasengan");
+    hurtingSound = CacheDataLoader.getInstance().getSound("dattebayo");
 
     setTeamType(LEAGUE_TEAM);
 

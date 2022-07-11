@@ -21,7 +21,7 @@ public class GameWorld {
   public BulletManager bulletManager;
   public Camera camera;
 
-  public static final int finalBossX = 3600;
+  public static final int finalBossY = 3600;
 
   public static final int INIT_GAME = 0;
   public static final int TUTORIAL = 1;
@@ -55,16 +55,16 @@ public class GameWorld {
 
   public GameWorld() {
 
-    texts1[0] = "We are heros, and our mission is protecting our Home\nEarth....";
-    texts1[1] = "There was a Monster from University on Earth in 10 years\n"
-        + "and we lived in the scare in that 10 years....";
-    texts1[2] = "Now is the time for us, kill it and get freedom!....";
+    texts1[0] = "Chào mừng các bạn đến với game của nhóm 5 : Naruto's Adventure\n😭....";
+    texts1[1] = "Lũ quái vật đã xâm chiếm ngồi làng của Naruto\n"
+        + "sử dụng phím mũi tên trái phải để di chuyển, cách để nhảy \nvà phím A để sử dụng kĩ năng....";
+    texts1[2] = "Cố gắng giết thật nhiều quái vật và hoàn thành trò chơi.\n Naruto-kun!....";
     texts1[3] = "      ÉT O ÉT!.....";
     textTutorial = texts1[0];
 
     bufferedImage = new BufferedImage(GameFrame.SCREEN_WIDTH, GameFrame.SCREEN_HEIGHT, BufferedImage.TYPE_INT_ARGB);
 
-    this.naruto = new Naruto(300, 300, this);
+    this.naruto = new Naruto(300, 120, this);
     this.naruto.setTeamType(ParticularObject.LEAGUE_TEAM);
     this.physicalMap = new PhysicalMap(0, 0, this);
     this.backgroundMap = new BackgroundMap(0, 0, this);
@@ -75,56 +75,71 @@ public class GameWorld {
 
     initEnemies();
 
-    bgMusic = CacheDataLoader.getInstance().getSound("bgmusic");
+    bgMusic = CacheDataLoader.getInstance().getSound("gamesong");
   }
 
   private void initEnemies() {
-    ParticularObject spider = new Spider(1250, 410, this);
+    ParticularObject spider = new Spider(1400, 360, this);
     spider.setDirection(ParticularObject.LEFT_DIR);
     spider.setTeamType(ParticularObject.ENEMY_TEAM);
     particularObjectManager.addObject(spider);
 
-    ParticularObject spider2 = new Spider(2500, 500, this);
+    ParticularObject spider2 = new Spider(1550, 860, this);
     spider2.setDirection(ParticularObject.LEFT_DIR);
     spider2.setTeamType(ParticularObject.ENEMY_TEAM);
     particularObjectManager.addObject(spider2);
 
-    ParticularObject spider3 = new Spider(3450, 500, this);
+    ParticularObject spider3 = new Spider(1850, 1260, this);
     spider3.setDirection(ParticularObject.LEFT_DIR);
     spider3.setTeamType(ParticularObject.ENEMY_TEAM);
     particularObjectManager.addObject(spider3);
 
-    ParticularObject spider4 = new Spider(500, 1190, this);
+    ParticularObject spider4 = new Spider(1150, 2060, this);
     spider4.setDirection(ParticularObject.RIGHT_DIR);
     spider4.setTeamType(ParticularObject.ENEMY_TEAM);
     particularObjectManager.addObject(spider4);
 
-    // bug
-    ParticularObject bug = new Bug(2000, 200, this);
+    ParticularObject spider5 = new Spider(750, 2360, this);
+    spider5.setDirection(ParticularObject.LEFT_DIR);
+    spider5.setTeamType(ParticularObject.ENEMY_TEAM);
+    particularObjectManager.addObject(spider5);
+
+    ParticularObject spider6 = new Spider(1850, 2760, this);
+    spider6.setDirection(ParticularObject.LEFT_DIR);
+    spider6.setTeamType(ParticularObject.ENEMY_TEAM);
+    particularObjectManager.addObject(spider6);
+
+    // // bug
+    ParticularObject bug = new Bug(1750, 650, this);
     bug.setTeamType(ParticularObject.ENEMY_TEAM);
     particularObjectManager.addObject(bug);
 
-    ParticularObject bug2 = new Bug(2800, 350, this);
+    ParticularObject bug2 = new Bug(1350, 2250, this);
     bug2.setTeamType(ParticularObject.ENEMY_TEAM);
     particularObjectManager.addObject(bug2);
 
-    // bat
-    ParticularObject bat = new Bat(1650, 950, this);
+    // // bat
+    ParticularObject bat = new Bat(600, 180, this);
     bat.setDirection(ParticularObject.LEFT_DIR);
     bat.setTeamType(ParticularObject.ENEMY_TEAM);
     particularObjectManager.addObject(bat);
 
-    // bird
+    ParticularObject bat1 = new Bat(860, 1100, this);
+    bat1.setDirection(ParticularObject.LEFT_DIR);
+    bat1.setTeamType(ParticularObject.ENEMY_TEAM);
+    particularObjectManager.addObject(bat1);
 
-    ParticularObject bird = new Bird(900, 400, this);
+    // // bird
+
+    ParticularObject bird = new Bird(600, 800, this);
     bird.setTeamType(ParticularObject.ENEMY_TEAM);
     particularObjectManager.addObject(bird);
 
-    ParticularObject bird2 = new Bird(3400, 350, this);
+    ParticularObject bird2 = new Bird(1200, 1600, this);
     bird2.setTeamType(ParticularObject.ENEMY_TEAM);
     particularObjectManager.addObject(bird2);
 
-    ParticularObject bird3 = new Bird(1500, 1150, this);
+    ParticularObject bird3 = new Bird(750, 3160, this);
     bird3.setTeamType(ParticularObject.ENEMY_TEAM);
     particularObjectManager.addObject(bird3);
 
@@ -153,14 +168,16 @@ public class GameWorld {
         break;
       case MEETFINALBOSS:
         if (storyTutorial == 0) {
+          System.out.println("meeting boss");
           if (openIntroGameY >= 450) {
             openIntroGameY -= 1;
           }
-          if (camera.getPosX() < finalBossX) {
-            camera.setPosX(camera.getPosX() + 2);
+          if (camera.getPosY() < finalBossY) {
+            camera.setPosY(camera.getPosY() + 1);
+            camera.setPosX(camera.getPosX() + 1.6F);
           }
 
-          if (naruto.getPosX() < finalBossX + 150) {
+          if (naruto.getPosY() < finalBossY + 100) {
             naruto.setDirection(ParticularObject.RIGHT_DIR);
             naruto.run();
             naruto.update();
@@ -168,19 +185,14 @@ public class GameWorld {
             naruto.stopRun();
           }
 
-          if (openIntroGameY < 450 && camera.getPosX() >= finalBossX && naruto.getPosX() >= finalBossX + 150) {
+          if (camera.getPosY() >= finalBossY - 250 && naruto.getPosY() >= finalBossY) {
+            System.out.println("lock");
             camera.lock();
             storyTutorial++;
             naruto.stopRun();
-            physicalMap.phys_map[14][120] = 1;
-            physicalMap.phys_map[15][120] = 1;
-            physicalMap.phys_map[16][120] = 1;
-            physicalMap.phys_map[17][120] = 1;
 
-            backgroundMap.map[14][120] = 17;
-            backgroundMap.map[15][120] = 17;
-            backgroundMap.map[16][120] = 17;
-            backgroundMap.map[17][120] = 17;
+            physicalMap.phys_map[35][10] = 1;
+            backgroundMap.map[35][10] = 20;
           }
 
         } else {
@@ -209,10 +221,10 @@ public class GameWorld {
         g2.fillRect(0, y2, GameFrame.SCREEN_WIDTH, GameFrame.SCREEN_HEIGHT / 2);
 
         if (storyTutorial >= 1) {
-          g2.drawImage(avatar.getImage(), 600, 250, null);
-          g2.setColor(Color.BLUE);
-          g2.fillRect(280, 450, 350, 80);
+          g2.drawImage(avatar.getImage(), 600, 240, null);
           g2.setColor(Color.WHITE);
+          g2.fillRect(280, 450, 350, 80);
+          g2.setColor(Color.BLACK);
           String text = textTutorial.substring(0, currentSize - 1);
           drawString(g2, text, 290, 480);
         }
@@ -249,14 +261,14 @@ public class GameWorld {
         physicalMap.update();
         camera.update();
 
-        if (naruto.getPosX() > finalBossX && finalbossTrigger) {
+        if (naruto.getPosY() > finalBossY && finalbossTrigger) {
           finalbossTrigger = false;
           switchState(TUTORIAL);
           tutorialState = MEETFINALBOSS;
           storyTutorial = 0;
           openIntroGameY = 550;
 
-          boss = new FinalBoss(finalBossX + 700, 460, this);
+          boss = new FinalBoss(1700, finalBossY + 100, this);
           boss.setTeamType(ParticularObject.ENEMY_TEAM);
           boss.setDirection(ParticularObject.LEFT_DIR);
           particularObjectManager.addObject(boss);
@@ -338,8 +350,15 @@ public class GameWorld {
             g2.drawImage(CacheDataLoader.getInstance().getFrameImage("hearth").getImage(), 20 + i * 40, 18, null);
           }
 
+          if (!finalbossTrigger) {
+            g2.setColor(Color.DARK_GRAY);
+            g2.fillRect(359, 29, 302, 22);
+            g2.setColor(Color.orange);
+            g2.fillRect(360, 30, boss.getBlood(), 20);
+          }
+
           if (state == GAMEWIN) {
-            g2.drawImage(CacheDataLoader.getInstance().getFrameImage("gamewin").getImage(), 300, 300, null);
+            g2.drawImage(CacheDataLoader.getInstance().getFrameImage("gamewin").getImage(), 220, 80, null);
           }
 
           break;

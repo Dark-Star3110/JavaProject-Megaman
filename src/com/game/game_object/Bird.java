@@ -33,7 +33,7 @@ public class Bird extends ParticularObject {
     setSpeedX(1);
     setSpeedY(1);
 
-    shooting = CacheDataLoader.getInstance().getSound("robotRshooting");
+    shooting = CacheDataLoader.getInstance().getSound("birdshooting");
   }
 
   @Override

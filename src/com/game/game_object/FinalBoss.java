@@ -11,7 +11,7 @@ import java.awt.Graphics2D;
 public class FinalBoss extends Human {
   private Animation idleforward, idleback;
   private Animation shootingforward, shootingback;
-  private Animation slideforward, slideback;
+  private Animation raikiriforward, raikiriback;
 
   private long startTimeForAttacked;
 
@@ -21,18 +21,18 @@ public class FinalBoss extends Human {
   private long lastAttackTime;
 
   public FinalBoss(float x, float y, GameWorld gameWorld) {
-    super(x, y, 110, 150, 0.1f, 100, gameWorld);
-    idleback = CacheDataLoader.getInstance().getAnimation("boss_idle");
-    idleforward = CacheDataLoader.getInstance().getAnimation("boss_idle");
-    idleforward.flipAllImage();
+    super(x, y, 75, 90, 0.1f, 300, gameWorld);
+    idleback = CacheDataLoader.getInstance().getAnimation("kakashi_idle");
+    idleback.flipAllImage();
+    idleforward = CacheDataLoader.getInstance().getAnimation("kakashi_idle");
 
-    shootingback = CacheDataLoader.getInstance().getAnimation("boss_shooting");
-    shootingforward = CacheDataLoader.getInstance().getAnimation("boss_shooting");
-    shootingforward.flipAllImage();
+    shootingback = CacheDataLoader.getInstance().getAnimation("kakashi_shoot");
+    shootingback.flipAllImage();
+    shootingforward = CacheDataLoader.getInstance().getAnimation("kakashi_shoot");
 
-    slideback = CacheDataLoader.getInstance().getAnimation("boss_slide");
-    slideforward = CacheDataLoader.getInstance().getAnimation("boss_slide");
-    slideforward.flipAllImage();
+    raikiriback = CacheDataLoader.getInstance().getAnimation("raikiri");
+    raikiriback.flipAllImage();
+    raikiriforward = CacheDataLoader.getInstance().getAnimation("raikiri");
 
     setTimeForNoBehurt(500 * 1000000);
     setDamage(10);
@@ -40,11 +40,11 @@ public class FinalBoss extends Human {
     attackType[0] = "NONE";
     attackType[1] = "shooting";
     attackType[2] = "NONE";
-    attackType[3] = "slide";
+    attackType[3] = "raikiri";
 
     timeAttack.put("NONE", 2000L);
     timeAttack.put("shooting", 500L);
-    timeAttack.put("slide", 5000L);
+    timeAttack.put("raikiri", 5000L);
 
   }
 
@@ -66,7 +66,7 @@ public class FinalBoss extends Human {
     if (!attackType[attackIndex].equals("NONE")) {
       if (attackType[attackIndex].equals("shooting")) {
 
-        Bullet bullet = new RocketBullet(getPosX(), getPosY() - 50, getGameWorld());
+        Bullet bullet = new Shuriken(getPosX(), getPosY() - 50, getGameWorld());
         if (getDirection() == LEFT_DIR)
           bullet.setSpeedX(-4);
         else
@@ -74,7 +74,7 @@ public class FinalBoss extends Human {
         bullet.setTeamType(getTeamType());
         getGameWorld().bulletManager.addObject(bullet);
 
-      } else if (attackType[attackIndex].equals("slide")) {
+      } else if (attackType[attackIndex].equals("raikiri")) {
 
         if (getGameWorld().physicalMap.haveCollisionWithLeftWall(getBoundForCollisionWithMap()) != null)
           setSpeedX(5);
@@ -127,7 +127,7 @@ public class FinalBoss extends Human {
       if (attackIndex >= attackType.length)
         attackIndex = 0;
 
-      if (attackType[attackIndex].equals("slide")) {
+      if (attackType[attackIndex].equals("raikiri")) {
         if (getPosX() < getGameWorld().naruto.getPosX())
           setSpeedX(5);
         else
@@ -140,10 +140,10 @@ public class FinalBoss extends Human {
 
   @Override
   public Rectangle getBoundForCollisionWithEnemy() {
-    if (attackType[attackIndex].equals("slide")) {
+    if (attackType[attackIndex].equals("raikiri")) {
       Rectangle rect = getBoundForCollisionWithMap();
-      rect.y += 100;
-      rect.height -= 100;
+      rect.y += 50;
+      rect.height -= 50;
       return rect;
     } else
       return getBoundForCollisionWithMap();
@@ -178,15 +178,15 @@ public class FinalBoss extends Human {
               (int) getPosY() - (int) getGameWorld().camera.getPosY(), g2);
         }
 
-      } else if (attackType[attackIndex].equals("slide")) {
+      } else if (attackType[attackIndex].equals("raikiri")) {
         if (getSpeedX() > 0) {
-          slideforward.update(System.nanoTime());
-          slideforward.draw((int) (getPosX() - getGameWorld().camera.getPosX()),
-              (int) getPosY() - (int) getGameWorld().camera.getPosY() + 50, g2);
+          raikiriforward.update(System.nanoTime());
+          raikiriforward.draw((int) (getPosX() - getGameWorld().camera.getPosX()),
+              (int) getPosY() - (int) getGameWorld().camera.getPosY() + 10, g2);
         } else {
-          slideback.update(System.nanoTime());
-          slideback.draw((int) (getPosX() - getGameWorld().camera.getPosX()),
-              (int) getPosY() - (int) getGameWorld().camera.getPosY() + 50, g2);
+          raikiriback.update(System.nanoTime());
+          raikiriback.draw((int) (getPosX() - getGameWorld().camera.getPosX()),
+              (int) getPosY() - (int) getGameWorld().camera.getPosY() + 10, g2);
         }
       }
     }

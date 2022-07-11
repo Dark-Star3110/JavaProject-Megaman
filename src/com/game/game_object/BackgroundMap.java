@@ -13,7 +13,7 @@ public class BackgroundMap extends GameObject {
   public BackgroundMap(float x, float y, GameWorld gameWorld) {
     super(x, y, gameWorld);
     map = CacheDataLoader.getInstance().getBackgroundMap();
-    tileSize = 30;
+    tileSize = 100;
   }
 
   @Override
@@ -28,9 +28,10 @@ public class BackgroundMap extends GameObject {
     for (int i = 0; i < map.length; i++)
       for (int j = 0; j < map[0].length; j++)
         // chỉ vẽ những vùng trong khung hình ( camera)
-        if (map[i][j] != 0 && j * tileSize - camera.getPosX() > -30
+        if (map[i][j] != 0 && j * tileSize - camera.getPosX() > -tileSize
             && j * tileSize - camera.getPosX() < GameFrame.SCREEN_WIDTH
-            && i * tileSize - camera.getPosY() > -30 && i * tileSize - camera.getPosY() < GameFrame.SCREEN_HEIGHT) {
+            && i * tileSize - camera.getPosY() > -tileSize
+            && i * tileSize - camera.getPosY() < GameFrame.SCREEN_HEIGHT) {
           g2.drawImage(CacheDataLoader.getInstance().getFrameImage("tiled" + map[i][j]).getImage(),
               (int) getPosX() + j * tileSize - (int) camera.getPosX(),
               (int) getPosY() + i * tileSize - (int) camera.getPosY(), null);

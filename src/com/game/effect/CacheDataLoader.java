@@ -22,8 +22,10 @@ public class CacheDataLoader {
   private String frameFile = "data/narutoframe.txt";
   // private String animationFile = "data/animation.txt";
   private String animationFile = "data/narutoanimation.txt";
-  private String physmapFile = "data/phys_map.txt";
-  private String backgroundmapFile = "data/background_map.txt";
+  // private String physmapFile = "data/phys_map.txt";
+  // private String backgroundmapFile = "data/background_map.txt";
+  private String physmapFile = "data/pmap.txt";
+  private String backgroundmapFile = "data/bgmap.txt";
   private String soundFile = "data/sounds.txt";
 
   private Hashtable<String, FrameImage> frameImages;

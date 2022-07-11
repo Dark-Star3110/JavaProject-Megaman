@@ -13,7 +13,7 @@ public class PhysicalMap extends GameObject {
 
   public PhysicalMap(float x, float y, GameWorld gameWorld) {
     super(x, y, gameWorld);
-    this.tileSize = 30;
+    this.tileSize = 100;
     phys_map = CacheDataLoader.getInstance().getPhysicalMap();
   }
 

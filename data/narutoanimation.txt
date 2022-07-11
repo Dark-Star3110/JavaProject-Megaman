@@ -1,4 +1,4 @@
-27
+26
 idle
 idle1 70000000 idle1 70000000 idle1 70000000
 
@@ -54,29 +54,26 @@ bat1 170000000 bat2 170000000 bat3 170000000 bat4 170000000
 spider
 spider1 120000000 spider2 120000000 spider3 120000000 spider4 120000000 spider5 120000000 spider6 120000000 spider7 120000000 spider8 120000000
 
-dangerousgirl
-dangerousgirl1 70000000 dangerousgirl2 70000000 dangerousgirl3 70000000 dangerousgirl4 70000000 dangerousgirl5 70000000 dangerousgirl6 70000000 dangerousgirl7 70000000 dangerousgirl8 70000000
-
 bird
 bird1 70000000 bird2 70000000 bird3 70000000 bird4 70000000
 
 violetbullet
 bullet5_1 70000000 bullet5_2 70000000 bullet5_3 70000000
 
-rocketUp
-rocketUp1 70000000
+shurikenUp
+shurikenup 70000000
 
-rocketDown
-rocketDown1 70000000
+shurikenDown
+shurikendown 70000000
 
-rocket
-rocket1 70000000
+shuriken
+shuriken 70000000
 
-boss_idle
-boss_idle1 500000000 boss_idle2 130000000 boss_idle3 130000000 boss_idle4 130000000 boss_idle5 130000000 boss_idle4 130000000 boss_idle3 130000000 boss_idle2 130000000
+kakashi_idle
+kakashi_idle1 500000000 kakashi_idle2 130000000 kakashi_idle3 130000000 kakashi_idle4 130000000 kakashi_idle4 130000000 kakashi_idle3 130000000 kakashi_idle2 130000000
 
-boss_shooting
-boss_shooting1 500000000 boss_shooting2 500000000
+kakashi_shoot
+kakashi_shoot1 500000000 kakashi_shoot2 500000000 kakashi_shoot3 500000000
 
-boss_slide
-boss_slide1 500000000 boss_slide2 500000000 boss_slide3 500000000 boss_slide4 500000000
+raikiri
+raikiri1 50000000 raikiri2 50000000 raikiri3 50000000 raikiri4 50000000 raikiri5 50000000 raikiri6 30000000 raikiri7 30000000 raikiri8 30000000 raikiri9 50000000 raikiri10 50000000 raikiri11 50000000 raikiri12 50000000 raikiri13 50000000 raikiri14 50000000 raikiri15 50000000

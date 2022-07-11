@@ -55,7 +55,7 @@ public class GameWorld {
 
   public GameWorld() {
 
-    texts1[0] = "Chào mừng các bạn đến với game của nhóm 5 : Naruto's Adventure\n😭....";
+    texts1[0] = "Chào mừng các bạn đến với game của nhóm 5:\n Naruto's Adventure 😭....";
     texts1[1] = "Lũ quái vật đã xâm chiếm ngồi làng của Naruto\n"
         + "sử dụng phím mũi tên trái phải để di chuyển, cách để nhảy \nvà phím A để sử dụng kĩ năng....";
     texts1[2] = "Cố gắng giết thật nhiều quái vật và hoàn thành trò chơi.\n Naruto-kun!....";

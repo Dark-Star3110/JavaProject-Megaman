@@ -21,7 +21,7 @@ public class FinalBoss extends Human {
   private long lastAttackTime;
 
   public FinalBoss(float x, float y, GameWorld gameWorld) {
-    super(x, y, 75, 90, 0.1f, 300, gameWorld);
+    super(x, y, 75, 90, 0.1f, 200, gameWorld);
     idleback = CacheDataLoader.getInstance().getAnimation("kakashi_idle");
     idleback.flipAllImage();
     idleforward = CacheDataLoader.getInstance().getAnimation("kakashi_idle");

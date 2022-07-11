@@ -352,7 +352,7 @@ public class GameWorld {
 
           if (!finalbossTrigger) {
             g2.setColor(Color.DARK_GRAY);
-            g2.fillRect(359, 29, 302, 22);
+            g2.fillRect(359, 29, 202, 22);
             g2.setColor(Color.orange);
             g2.fillRect(360, 30, boss.getBlood(), 20);
           }

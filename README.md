@@ -18,4 +18,5 @@ Chế độ xem `JAVA PROJECTS` cho phép bạn quản lý các phần phụ thu
 ## Chi tiết về project
 
 -   Project là bài tập lớn thực hành ngôn ngữ hướng đối tượng 🙂
--   Project clone & update lại game Megaman huyền thoại bằng ngôn ngữ Java 😵‍💫
+-   Project là 1 simple game làm bằng ngôn ngữ Java 😵‍💫
+-   Do tự thiết kế map và nhân vật nên giao diện khá củ chuối 🤡
